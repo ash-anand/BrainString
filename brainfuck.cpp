@@ -43,6 +43,7 @@ int main(int argc, char ** argv){
 
 	string bf;
 	string input;
+	cout<<"Enter the String : ";
 	getline(cin,input);
 	for(int j = 0; j < input.length(); j++){
 		bf += brainfuck(input[j]);
