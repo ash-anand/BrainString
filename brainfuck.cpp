@@ -21,6 +21,21 @@ string brainfuck(char c){
 	for(int i = 0; i < rem; i++)
 		returnString += "+";
 	returnString += ". <\n";	//Print the value and go to iterator
+	for(int i = 0; i < rem; i++)
+		returnString += "-"; //Make iterator zero
+	for(int i = 0; i < quo; i++){
+		returnString += "+";     //Loop incrementation
+	}
+	returnString += "[ > ";        //Enter loop
+	for(int i = 0; i < ITER; i++){
+		returnString += "-";     //Inside loop decrement
+	}
+	returnString += "< - ] > ";     //Decrement the last element and continue the loop
+	for(int i = 0; i < rem; i++)
+		returnString += "-";
+	returnString += "<";
+	for(int i = 0; i < rem; i++)
+		returnString += "-"; //Make iterator zero
 	returnString += "\n";	//Looks good
 	return returnString;
 }
